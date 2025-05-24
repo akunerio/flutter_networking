@@ -19,9 +19,3 @@ class Products {
     );
   }
 }
-
-// make list from data model products
-List<Products> parseProducts(String responseBody) {
-  final parsed = jsonDecode(responseBody).cast<Map<String, dynamic>>();
-  return parsed.map<Products>((json) => Products.fromJson(json)).toList();
-}
